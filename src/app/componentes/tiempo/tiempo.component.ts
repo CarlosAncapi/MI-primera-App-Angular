@@ -22,8 +22,8 @@ export class TiempoComponent implements OnInit {
    */
   iniciaFormulario(){
     this.formulario = this.fb.group({
-      ciudad: ['', Validators.required  ],
-      codigo: ['', Validators.required  ]
+      ciudad: ['', Validators.required, Validators.pattern('^[a-zA-Z]*$') ],
+      codigo: ['', Validators.required, Validators.pattern('^[a-zA-Z]*$') ]
     })
   }
 
